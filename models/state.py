@@ -12,7 +12,7 @@ import shlex
 class State(BaseModel, Base):
     """This is the class for State
     Attributes:
-        name (str): The name of the state
+        name: input name
     """
     __tablename__ = "states"
     name = Column(String(128), nullable=False)
