@@ -1,8 +1,9 @@
 #!/usr/bin/python3
 """This module starts a Flask web application"""
-import flask
+from flask import Flask, render_template
 
-app = flask.Flask(__name__)
+app = Flask(__name__)
+
 
 
 @app.route('/', strict_slashes=False)
@@ -35,7 +36,7 @@ def number(n):
 
 @app.route('number_template/<int:n>', strict_slashes=False)
 def number_template(n):
-    return flask.render_template("5-number.html", n)
+    return render_template("5-number.html", n)
 
 
 if __name__ == "__main__":
