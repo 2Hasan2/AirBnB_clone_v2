@@ -71,6 +71,10 @@ class FileStorage():
         except Exception as e:
             raise e
 
+    def close(self):
+        """call reload() method for deserializing the JSON file to __objects"""
+        self.reload()
+
     # helper functions
     def deleteObj(self, model="", ObjId=""):
         """delete object from __objects"""
